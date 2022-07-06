@@ -1,2 +1,2 @@
 # Kurppa
-Tsoha 2022
+Tsoha 2022 - tietojenkäsittelytieteen tietokantasovellusharjoitustyökurssi
