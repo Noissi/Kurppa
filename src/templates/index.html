@@ -7,9 +7,14 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" id="bootstrap-css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 </head>
-<body id="Kurppa">
+<body id="myPage">
 
 <!-- Sidebar on click -->
 <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
@@ -58,6 +63,23 @@
   <div class="w3-container w3-display-middle">  
     <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="addsight">LISÄÄ HAVAINTO</button>
   </div>
+  <div class="w3-container w3-display-right" style="width: 20%">
+    <div class="svg-item">
+	  <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
+		<circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
+		<circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5"></circle>
+		<circle id="circle" class="donut-segment donut-segment-2" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5" stroke-dasharray="0 100" stroke-dashoffset="25"></circle>
+		<g class="donut-text donut-text-1">
+		<text y="50%" transform="translate(0, 2)">
+		  <tspan x="50%" text-anchor="middle" class="donut-percent">{{percentage}}%</tspan>   
+		</text>
+		<text y="60%" transform="translate(0, 2)">
+		  <tspan x="50%" text-anchor="middle" class="donut-data">{{score}}</tspan>   
+		</text>
+		</g>
+	  </svg>
+	</div>
+  </div>
   
 </div>
 
@@ -98,7 +120,13 @@
 		  <h2 class="h3">Viimeisimmät havainnot</h2>
 		</div>
 		<div class="card-body no-padding">
-			
+			{% for sight in sights10 %}
+			<div class="item d-flex align-items-center">
+			<div class="image"><img src="/static/images/kurppa.jpg" alt="..." class="img-fluid rounded-circle"></div>
+			<div class="text"><a href="#">
+				<h3 class="h5">{{ sight.name_fi }}</h3></a><small>{{ sight.date.strftime("%d.%m.%Y %H:%M") }}</small></div>
+			</div>
+			{% endfor %}
 		</div>
 	  </div>
 	</div>
@@ -108,6 +136,7 @@
 			<h2 class="h3">Tänään</h2>
 		  </div>
 		  <div class="card-body no-padding">
+			<p class="stat-number">{{score_day}}</p>
 		  </div>
 		</div>
     </div>
@@ -117,6 +146,7 @@
 			<h2 class="h3">Tässä kuussa</h2>
 		  </div>
 		  <div class="card-body no-padding">
+			<p class="stat-number">{{score_month}}</p>
 		  </div>
 		</div>
 	</div>
@@ -126,6 +156,7 @@
 			<h2 class="h3">Tänä vuonna</h2>
 		  </div>
 		  <div class="card-body no-padding">
+			<p class="stat-number">{{score_year}}</p>
 		  </div>
 		</div>
 	</div>
@@ -136,7 +167,17 @@
 		  </div>
 		  <div class="card-body no-padding">
 			<!-- Progress Bar -->
-			
+			<div class="work-process">
+				{% for orderr in orderrs %}
+				<div class="project">
+					<span class="orderr" style="float:left">{{orderr}}</span>
+					<div class="project-bar">
+						<div id="progress-bar" class="project-percent" percent="0/0">
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
 		  </div>
 		</div>
 	</div>
@@ -163,11 +204,13 @@
 <div class="w3-row"><br>
 
 <hr>
+{% for bird in birds %}
 <div class="w3-col s2">
-  <img src="/static/images/kurppa.jpg" alt="kurppa" style="width:70%; margin-top:30px" class="bird-img w3-circle">
-  <h3 style="margin-bottom: 0px;margin-top: 7px;">Kurppa</h3>
-  <p>kurp</p>
+  <img src="{{bird.image}}" alt="kurppa" style="width:70%; margin-top:30px" class="bird-img w3-circle">
+  <h3 style="margin-bottom: 0px;margin-top: 7px;">{{bird.name_fi}}</h3>
+  <p>{{bird.name_lat}}</p>
 </div>
+{% endfor %}
 
 </div>
 </div>
@@ -176,7 +219,7 @@
 <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
 
 <div class="w3-quarter">
-<h2>Kurpista</h2>
+<h2>Our Work</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
@@ -188,8 +231,18 @@
   style="position:absolute;top:-28px;right:24px">+</a>
 </div>
 
+<!-- Image of location/map -->
+<img src="/static/images/kurppa.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
+
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
     <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
@@ -223,8 +276,76 @@ function openNav() {
   }
 }
 </script>
+<script>
+// Script for autocomplete
+autocomplete(document.getElementById("birdname"), JSON.parse({{birdnames_json|tojson}}));
+
+// Script for percentage circle
+window.onload = function(){
+    var number = 100 - {{percentage}};
+
+	document.documentElement.style.setProperty('--my-percentage', {{percentage}});
+	document.documentElement.style.setProperty('--my-percentage-left', number);
+	document.getElementById('circle').setAttribute("stroke-dasharray", {{percentage}} + " " + number);
+};
+</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+var orderr_dict = {{orderr_statics|tojson}}
+var orderrnum_dict = {{orderr_nums|tojson}}
+
+$('.project-percent').each(function(){
+// Script for progress bar layout
+
+// Modified from https://www.markuptag.com/jquery-animated-progress-bar-with-percentage-counter/
+    var $this = $(this);
+	
+	var orderr = this.parentElement.previousElementSibling.textContent
+	
+	var percent = 0
+	var numtext = 0
+	if (orderr in orderr_dict) {
+		var percent = 100 * orderr_dict[orderr] / orderrnum_dict[orderr];
+		var numtext = orderr_dict[orderr];
+	}
+	
+    //$this.attr('percent', numtext);
+    $this.css("width",percent+'%');
+    $({animatedValue: 0}).animate({animatedValue: numtext},{
+        duration: 2000,
+        step: function(){
+            $this.attr('percent', numtext + "/" + orderrnum_dict[orderr]);
+        },
+        complete: function(){
+            $this.attr('percent', numtext + "/" + orderrnum_dict[orderr]);
+        }
+		
+    });
+});
+</script>
+<script>
+var unique_sights = {{unique_sights|tojson}}
+
+$('.bird-img').each(function(){
+// Script for bird list
+
+    var $this = $(this);
+	
+	var bird = this.nextElementSibling.textContent
+	if (!unique_sights.includes(bird)) {
+	    $this.css("filter", "grayscale(1)");
+		var name = $this[0].nextElementSibling;
+	    $(name).css('color', 'grey');
+	    $(name.nextElementSibling).css('color', 'grey');
+	}
+	
+	if ($this.attr("src") == "None") {
+	    $this.attr("src", "/static/images/bird_placeholder.jpg");
+	}
+		
+});
+</script>
 
 
 </body>

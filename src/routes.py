@@ -2,6 +2,7 @@ from app import app
 from flask import redirect, render_template, request, session
 from services.user_service import user_service
 from services.sight_service import sight_service
+from services.bird_service import bird_service
 from entities.user import UserAccount
 
 
@@ -11,7 +12,28 @@ def index():
     if not session.get("user"):
         return redirect("/login")
 
-    return render_template("index.html")
+    user = user_service.from_json(session["user"])
+    score = user.get_score()
+    score_year = sight_service.get_score_year(user)
+    score_month = sight_service.get_score_month(user)
+    score_day = sight_service.get_score_day(user)
+    sights10 = sight_service.get_sights_10(user)
+    unique_sights = sight_service.get_unique_sights(user)
+    birds = bird_service.get_birds()
+    birdnames = bird_service.get_birdnames()
+    birdnames_json = bird_service.to_json(birdnames)
+    percentage = sight_service.get_percentage(score, birds)
+    orderrs = bird_service.get_orderrs()
+    orderr_nums = bird_service.get_birdnums_in_orderrs()
+    orderr_statics = sight_service.get_orderr_statics(orderrs, user)
+
+    return render_template("index.html", sights10=sights10,
+                            unique_sights=unique_sights,
+                            score=score, score_year=score_year,
+                            score_month=score_month, score_day=score_day,
+                            birds=birds, birdnames_json=birdnames_json,
+                            percentage=percentage, orderrs=orderrs, 
+                            orderr_nums=orderr_nums, orderr_statics=orderr_statics)
 
 @app.route("/signup", methods=["GET"])
 def signuppage():
