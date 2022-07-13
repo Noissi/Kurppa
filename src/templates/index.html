@@ -70,6 +70,18 @@
       <h5>Vaikkapa kurppa <i class="fa fa-smile-o"></i></h5>
     </header>
     <div class="w3-container">
+
+      <form action="/add-sight" method="POST" class="w3-text-teal" autocomplete="off">
+		<label for="name">Laji:</label>
+		<div class="autocomplete" style="width:300px;">
+		  <input class="autocomplete-text" id="birdname" type="text" name="birdname" placeholder="lintulaji">
+	    </div>
+		<br>
+		<label for="date">Aika:</label>
+		<input type="date" id="date" name="date">
+		<br>
+		<input type="submit" value="Lähetä">
+	  </form>
 	  
     </div>
     <footer class="w3-container w3-teal">

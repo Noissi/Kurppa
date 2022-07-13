@@ -1,6 +1,7 @@
 from app import app
 from flask import redirect, render_template, request, session
 from services.user_service import user_service
+from services.sight_service import sight_service
 from entities.user import UserAccount
 
 
@@ -47,4 +48,19 @@ def login():
 @app.route("/logout")
 def logout():
     del session["user"]
+    return redirect("/")
+
+@app.route("/add-sight", methods=["GET"])
+def sight():
+    return render_template("sight.html")
+
+@app.route("/add-sight", methods=["POST"])
+def add():
+    birdname = request.form["birdname"]
+    date = request.form["date"]
+
+    user = user_service.from_json(session["user"])
+    sight_service.add_sight(birdname, date, user)
+    user_json = user_service.to_json(user)
+    session["user"] = user_json
     return redirect("/")
