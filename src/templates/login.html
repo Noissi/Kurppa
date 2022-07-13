@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Kurppa</title>
+    </head>
+    <body>
+        <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto my-auto">
+            <div class="row">
+                <div class="col-6">
+                    <div class="px-3 justify-content-center mt-4 mb-5 border-line"> <img src="static/images/kurppa.jpg" class="image"> </div>
+                    <h3 style="text-align:center">Ota osaa kurppailuun!</h3>
+                </div>
+                <div class="login-box card border-0 px-4 py-5">
+                    
+		{% if  error %}
+		<p class="text-danger" style="position: absolute; Top: 5%">{{ error }}</p>
+		{% endif %}
+
+                    <form action="/login" method="POST">
+                        <div class="row px-3">
+                            <label class="mb-1"><h6 class="mb-0 text-sm">Käyttäjätunnus</h6></label>
+                            <input class="mb-4" type="text" id="username" name="username" placeholder="Anna käyttäjätunnus"> </div>
+                        <div class="row px-3">
+                            <label class="mb-1"><h6 class="mb-0 text-sm">Salasana</h6></label>
+                            <input type="password" id="password" name="password" placeholder="Anna salasana"></div>
+                        <div class="row mb-3 px-3"> <button type="submit" class="btn btn-blue text-center">Kirjaudu</button> </div>
+                    </form>
+                    
+                    <div class="row mb-4 px-3"> <small class="font-weight-bold">Ei vielä tunnusta? <a class="text-danger" href="/signup">Luo uusi tunnus</a></small> </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,89 @@
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #87CEEB;
+    background-repeat: no-repeat
+}
+
+.login-box {
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+.signup-box {
+    height: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+.signup-text {
+    text-align: center;
+}
+
+.image {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.border-line {
+    border-right: 1px solid #EEEEEE
+}
+
+.text-sm {
+    font-size: 14px !important
+}
+
+input,
+textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px
+}
+
+input:focus,
+textarea:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #304FFE;
+    outline-width: 0
+}
+
+button:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+a {
+    color: inherit;
+    cursor: pointer
+}
+
+.btn-blue {
+    background-color: #1A237E;
+    width: 150px;
+    color: #fff;
+    border-radius: 2px;
+    margin-top: 10px;
+}
+
+.btn-blue:hover {
+    background-color: #000080;
+    cursor: pointer
+}
+
+.bg-blue {
+    color: #fff;
+    background-color: #1A237E
+}

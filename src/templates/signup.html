@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Kurppa</title>
+    </head>
+    <body>
+        <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto my-auto">
+          <div class="row">
+            <div class="col-6">
+              <div class="px-3 justify-content-center mt-4 mb-5 border-line">
+                  <img src="static/images/kurppa.jpg" class="image">
+              </div>
+              <h3 style="text-align:center">Ota osaa kurppailuun!</h3>
+            </div>
+            <div class="signup-box card border-0 px-4 py-5">
+              <h6 class="signup-text">Uusi kurppailija</h6>
+
+              <form method="POST" action="/signup">
+                <div class="row px-3">
+                    <label class="mb-1"><h6 class="mb-0 text-sm">Käyttäjänimi</h6></label>
+                    <input class="mb-4" type="username" id="username" name="username"
+                           placeholder="Kirjoita käyttäjätunnus" maxlength="25"></div>
+                <div class="row px-3">
+                    <label class="mb-1"><h6 class="mb-0 text-sm">Salasana</h6></label>
+                    <input type="password" id="password" name="password" placeholder="Kirjoita salasana"></div>
+                <div class="row mb-3 px-3">
+                    <button type="submit" class="btn btn-blue text-center">Luo uusi käyttäjä!</button></div>
+              </form>
+              
+              {% if  error %}
+              <p class="text-danger" style="position: absolute; Bottom: -1%">{{ error }}</p>
+              {% endif %}
+
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>
+

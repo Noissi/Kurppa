@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kurppa</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body id="Kurppa">
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Uusi havainto</a>
+  <a href="#static" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Tilastot</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Linnut</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+    </div>
+  </div>
+  <a href="/logout" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">Kirjaudu ulos</a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#work" class="w3-bar-item w3-button">Work</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="/static/images/kurppa.jpg" alt="header" style="width:100%;min-height:350px;max-height:600px;">
+  <div class="w3-container w3-display-middle">  
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="addsight">LISÄÄ HAVAINTO</button>
+  </div>
+  
+</div>
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-teal w3-display-container"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>Lisää uusi lintuhavainto</h4>
+      <h5>Vaikkapa kurppa <i class="fa fa-smile-o"></i></h5>
+    </header>
+    <div class="w3-container">
+	  
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Modal footer</p>
+    </footer>
+  </div>
+</div>
+
+<!-- Statics Container -->
+<div class="grid-container w3-padding-24" id="static">
+    <div class="grid-item item1">
+	  <div class="articles card">
+		<div class="card-header d-flex align-items-center">
+		  <h2 class="h3">Viimeisimmät havainnot</h2>
+		</div>
+		<div class="card-body no-padding">
+			
+		</div>
+	  </div>
+	</div>
+	<div class="grid-item item2">
+		<div class="articles card">
+		  <div class="card-header d-flex align-items-center">
+			<h2 class="h3">Tänään</h2>
+		  </div>
+		  <div class="card-body no-padding">
+		  </div>
+		</div>
+    </div>
+	<div class="grid-item item3">
+		<div class="articles card">
+		  <div class="card-header d-flex align-items-center">
+			<h2 class="h3">Tässä kuussa</h2>
+		  </div>
+		  <div class="card-body no-padding">
+		  </div>
+		</div>
+	</div>
+	<div class="grid-item item4">
+		<div class="articles card">
+		  <div class="card-header d-flex align-items-center">
+			<h2 class="h3">Tänä vuonna</h2>
+		  </div>
+		  <div class="card-body no-padding">
+		  </div>
+		</div>
+	</div>
+    <div class="grid-item item5">
+		<div class="articles card">
+		  <div class="card-header d-flex align-items-center">
+			<h2 class="h3">Lahkoittain</h2>
+		  </div>
+		  <div class="card-body no-padding">
+			<!-- Progress Bar -->
+			
+		  </div>
+		</div>
+	</div>
+    <div class="grid-item item6">
+		<div class="articles card">
+		  <div class="card-header d-flex align-items-center">
+			<h3 style="text-align:center !important">Jotain</h3>
+		  </div>
+		  <div class="card-body no-padding">
+		    <img src="/static/images/kurppa.jpg">
+	      </div>
+		  </div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+
+<h2>OUR TEAM</h2>
+<p>Meet the team - our office kurpat:</p>
+
+<div class="w3-row"><br>
+
+<hr>
+<div class="w3-col s2">
+  <img src="/static/images/kurppa.jpg" alt="kurppa" style="width:70%; margin-top:30px" class="bird-img w3-circle">
+  <h3 style="margin-bottom: 0px;margin-top: 7px;">Kurppa</h3>
+  <p>kurp</p>
+</div>
+
+</div>
+</div>
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="w3-quarter">
+<h2>Kurpista</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+</div>
+
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+  style="position:absolute;top:-28px;right:24px">+</a>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script src="/static/javascript/autocomplete.js"></script> 
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+</body>
+</html>
