@@ -14,7 +14,7 @@
     height: 140px;
 }
 .bird-img:hover {
-    filter: grayscale(0);
+    filter: grayscale(0) !important;
 }
 
 /* Statistics grid */
