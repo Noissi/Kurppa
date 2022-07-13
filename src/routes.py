@@ -64,3 +64,6 @@ def add():
     user_json = user_service.to_json(user)
     session["user"] = user_json
     return redirect("/")
+
+if __name__=='__main__':
+    app.run()
