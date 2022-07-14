@@ -27,13 +27,13 @@ ANAACU,Anas acuta,,jouhisorsa,stjärtand,Northern Pintail,Sorsalinnut,Sorsat,htt
 ANAQUE,Anas querquedula,,heinätavi,årta,Garganey,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2022/03/30/13/41/bird-7101197__340.jpg
 ANADIS,Anas discors,,sinisiipitavi,blåvingad årta,Blue-winged Teal,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2021/04/05/20/41/blue-winged-teal-6154603__340.jpg
 ANACLY,Anas clypeata,,lapasorsa,skedand,Northern Shoveler,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2022/02/14/10/48/bird-7012892__340.jpg
-NETRUF,Netta rufina,,punapäänarsku,rödhuvad dykand,Red-crested Pochard,Sorsalinnut,Sorsat,
-AYTFER,Aythya ferina,,punasotka,brunand,Common Pochard,Sorsalinnut,Sorsat,
+NETRUF,Netta rufina,,punapäänarsku,rödhuvad dykand,Red-crested Pochard,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2021/10/16/10/32/anade-6714685__480.jpg
+AYTFER,Aythya ferina,,punasotka,brunand,Common Pochard,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2018/11/20/05/04/pochard-3826533__340.jpg
 AYTCOL,Aythya collaris,,amerikantukkasotka,ringand,Ring-necked Duck,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2016/03/07/19/13/duck-1242811_960_720.jpg
-AYTNYR,Aythya nyroca,,ruskosotka,vitögd dykand,Ferruginous Duck,Sorsalinnut,Sorsat,
+AYTNYR,Aythya nyroca,,ruskosotka,vitögd dykand,Ferruginous Duck,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2017/06/16/09/11/ferruginous-duck-2408352__340.jpg
 AYTFUL,Aythya fuligula,,tukkasotka,vigg,Tufted Duck,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2020/02/02/21/06/tufted-duck-4814171__340.jpg
 AYTMAR,Aythya marila,,lapasotka,bergand,Greater Scaup,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2019/07/22/23/43/greater-scaup-4356282__480.jpg
-AYTAFF,Aythya affinis,,pikkulapasotka,mindre bergand,Lesser Scaup,Sorsalinnut,Sorsat,
+AYTAFF,Aythya affinis,,pikkulapasotka,mindre bergand,Lesser Scaup,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2021/09/17/18/27/lesser-scaup-6633424__480.jpg
 SOMMOL,Somateria mollissima,,haahka,ejder,Common Eider,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2021/04/08/18/31/eider-6162542__340.jpg
 SOMSPE,Somateria spectabilis,,kyhmyhaahka,praktejder,King Eider,Sorsalinnut,Sorsat,
 POLSTE,Polysticta stelleri,,allihaahka,alförrädare,Steller's Eider,Sorsalinnut,Sorsat,
@@ -49,25 +49,25 @@ MERALB,Mergellus albellus,,uivelo,salskrake,Smew,Sorsalinnut,Sorsat,https://cdn.
 MERSER,Mergus serrator,,tukkakoskelo,småskrake,Red-breasted Merganser,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2021/04/08/21/37/red-breasted-merganser-6162883__340.jpg
 MERMER,Mergus merganser,,isokoskelo,storskrake,Goosander,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2020/11/22/12/30/goosander-5766455__340.jpg
 OXYJAM,Oxyura jamaicensis,C,kuparisorsa,amerikansk kopparand,Ruddy Duck,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2020/07/16/01/01/duck-5409308__340.jpg
-CYGATR,Cygnus atratus,E,mustajoutsen,svart svan,Black Swan,Sorsalinnut,Sorsat,
-ANSCYG,Anser cygnoides,E,joutsenhanhi,svangås,Swan Goose,Sorsalinnut,Sorsat,
-ANSCAE,Anser caerulescens,E,lumihanhi,snögås,Snow Goose,Sorsalinnut,Sorsat,
+CYGATR,Cygnus atratus,E,mustajoutsen,svart svan,Black Swan,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2018/04/22/12/32/swan-3340932__340.jpg
+ANSCYG,Anser cygnoides,E,joutsenhanhi,svangås,Swan Goose,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2016/11/05/20/25/suhonos-1801356__340.jpg
+ANSCAE,Anser caerulescens,E,lumihanhi,snögås,Snow Goose,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2020/12/04/13/11/snow-goose-5803158__480.jpg
 ANSROS,Anser rossii,E,eskimohanhi,dvärgsnögås,Ross's Goose,Sorsalinnut,Sorsat,
 ALOAEG,Alopochen aegyptiaca,E,afrikanhanhi,nilgås,Egyptian Goose,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2019/09/28/13/20/nilgans-4510759__340.jpg
-AIXSPO,Aix sponsa,E,morsiosorsa,brudand,Wood Duck,Sorsalinnut,Sorsat,
+AIXSPO,Aix sponsa,E,morsiosorsa,brudand,Wood Duck,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2016/06/29/13/00/duck-1486716__480.jpg
 ANASIB,Anas sibilatrix,E,patagonianhaapana,chilebläsand,Chiloe Wigeon,Sorsalinnut,Sorsat,
-ANAFAL,Anas falcata,D,sirppisorsa,praktand,Falcated Duck,Sorsalinnut,Sorsat,
-ANABAH,Anas bahamensis,E,valkoposkisorsa,bahamaand,Bahama Pintail,Sorsalinnut,Sorsat,
-ANACYA,Anas cyanoptera,E,punatavi,kanelårta,Cinnamon Teal,Sorsalinnut,Sorsat,
-BUCALB,Bucephala albeola,D,pikkutelkkä,buffelhuvud,Bufflehead,Sorsalinnut,Sorsat,
-MERCUC,Mergus cucullatus,D,harjakoskelo,kamskrake,Hooded Merganser,Sorsalinnut,Sorsat,
-COTCOT,Coturnix coturnix,,viiriäinen,vaktel,Common Quail,Kanalinnnut,Aitokanat,
+ANAFAL,Anas falcata,D,sirppisorsa,praktand,Falcated Duck,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2017/06/13/23/51/falcated-2400586__340.jpg
+ANABAH,Anas bahamensis,E,valkoposkisorsa,bahamaand,Bahama Pintail,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2018/04/17/09/45/shilokhvost-3327079__340.jpg
+ANACYA,Anas cyanoptera,E,punatavi,kanelårta,Cinnamon Teal,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2020/06/19/00/11/cinnamon-5315322__480.jpg
+BUCALB,Bucephala albeola,D,pikkutelkkä,buffelhuvud,Bufflehead,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2020/03/05/00/12/duck-4903047__480.jpg
+MERCUC,Mergus cucullatus,D,harjakoskelo,kamskrake,Hooded Merganser,Sorsalinnut,Sorsat,https://cdn.pixabay.com/photo/2020/04/18/23/28/hooded-merganser-5061356__480.jpg
+COTCOT,Coturnix coturnix,,viiriäinen,vaktel,Common Quail,Kanalinnnut,Aitokanat,https://cdn.pixabay.com/photo/2014/10/27/01/12/quail-504658__340.jpg
 TETBON,Tetrastes bonasia,,pyy,järpe,Hazel Grouse,Kanalinnnut,Aitokanat,
-LAGLAG,Lagopus lagopus,,riekko,dalripa,Willow Ptarmigan,Kanalinnnut,Aitokanat,
-LAGMUT,Lagopus muta,,kiiruna,fjällripa,Rock Ptarmigan,Kanalinnnut,Aitokanat,
+LAGLAG,Lagopus lagopus,,riekko,dalripa,Willow Ptarmigan,Kanalinnnut,Aitokanat,https://cdn.pixabay.com/photo/2020/03/18/07/50/lagopus-muta-4943115__340.jpg
+LAGMUT,Lagopus muta,,kiiruna,fjällripa,Rock Ptarmigan,Kanalinnnut,Aitokanat,https://cdn.pixabay.com/photo/2019/05/24/17/48/rock-ptarmigan-4226804_960_720.jpg
 TETRIX,Tetrao tetrix,,teeri,orre,Black Grouse,Kanalinnnut,Aitokanat,https://cdn.pixabay.com/photo/2019/04/14/11/14/black-grouse-4126537__340.jpg
 TETURO,Tetrao urogallus,,metso,tjäder,Capercaillie,Kanalinnnut,Aitokanat,https://cdn.pixabay.com/photo/2021/05/29/06/36/birds-6292604__340.jpg
-PERPER,Perdix perdix,,peltopyy,rapphöna,Grey Partridge,Kanalinnnut,Aitokanat,
+PERPER,Perdix perdix,,peltopyy,rapphöna,Grey Partridge,Kanalinnnut,Aitokanat,https://cdn.pixabay.com/photo/2022/02/01/12/00/partridge-6986168__480.jpg
 PHACOL,Phasianus colchicus,C,fasaani,fasan,Common Pheasant,Kanalinnnut,Aitokanat,https://cdn.pixabay.com/photo/2015/05/13/13/26/pheasant-765448__340.jpg
 GAVSTE,Gavia stellata,,kaakkuri,smålom,Red-throated Diver,Kuikkalinnut,Kuikat,
 GAVARC,Gavia arctica,,kuikka,storlom,Black-throated Diver,Kuikkalinnut,Kuikat,
@@ -87,30 +87,30 @@ OCELEU,Oceanodroma leucorhoa,,myrskykeiju,klykstjärtad stormsvala,Leach's Storm
 OCECAS,Oceanodroma castro,,madeirankeiju,oceanlöpare,Madeiran Storm Petrel,Ulappalinnut,Ulappakeijut,
 MORBAS,Morus bassanus,,suula,havssula,Northern Gannet,Pelikaanilinnut,Suulat,https://cdn.pixabay.com/photo/2018/12/14/09/06/bempton-cliffs-3874516__340.jpg
 PHACAR,Phalacrocorax carbo,,merimetso,storskarv,Cormorant,Pelikaanilinnut,Merimetsot,https://cdn.pixabay.com/photo/2022/07/09/05/01/bird-7310151__340.jpg
-PHAARI,Phalacrocorax aristotelis,,karimetso,toppskarv,Shag,Pelikaanilinnut,Merimetsot,
+PHAARI,Phalacrocorax aristotelis,,karimetso,toppskarv,Shag,Pelikaanilinnut,Merimetsot,https://cdn.pixabay.com/photo/2017/04/28/12/56/archipelago-cies-2268293__480.jpg
 PELONO,Pelecanus onocrotalus,B,pelikaani,vit pelikan,White Pelican,Pelikaanilinnut,Pelikaanit,https://cdn.pixabay.com/photo/2022/07/09/07/20/bird-7310329__340.jpg
 BOTSTE,Botaurus stellaris,,kaulushaikara,rördrom,Bittern,Haikaralinnut,Haikarat,https://cdn.pixabay.com/photo/2021/12/08/04/24/bittern-6854628__340.jpg
-IXOMIN,Ixobrychus minutus,,pikkuhaikara,dvärgrördrom,Little Bittern,Haikaralinnut,Haikarat,
-NYCNYC,Nycticorax nycticorax,,yöhaikara,natthäger,Black-crowned Night Heron,Haikaralinnut,Haikarat,
-ARDRAL,Ardeola ralloides,,rääkkähaikara,rallhäger,Squacco Heron,Haikaralinnut,Haikarat,
+IXOMIN,Ixobrychus minutus,,pikkuhaikara,dvärgrördrom,Little Bittern,Haikaralinnut,Haikarat,https://cdn.pixabay.com/photo/2017/08/05/12/09/bird-2583046__340.jpg
+NYCNYC,Nycticorax nycticorax,,yöhaikara,natthäger,Black-crowned Night Heron,Haikaralinnut,Haikarat,https://cdn.pixabay.com/photo/2018/11/20/19/09/spain-3828048__340.jpg
+ARDRAL,Ardeola ralloides,,rääkkähaikara,rallhäger,Squacco Heron,Haikaralinnut,Haikarat,https://cdn.pixabay.com/photo/2018/05/30/00/24/water-plan-3440451__340.jpg
 BUBIBI,Bubulcus ibis,,lehmähaikara,kohäger,Cattle Egret,Haikaralinnut,Haikarat,https://cdn.pixabay.com/photo/2019/02/15/10/10/cattle-egret-3998166__340.jpg
-EGRGAR,Egretta garzetta,,silkkihaikara,silkeshäger,Little Egret,Haikaralinnut,Haikarat,
+EGRGAR,Egretta garzetta,,silkkihaikara,silkeshäger,Little Egret,Haikaralinnut,Haikarat,https://cdn.pixabay.com/photo/2017/07/10/21/09/little-egret-2491566__340.jpg
 EGRALB,Egretta alba,,jalohaikara,ägretthäger,Great Egret,Haikaralinnut,Haikarat,https://cdn.pixabay.com/photo/2020/09/22/08/25/great-egret-5592300__340.jpg
 ARDCIN,Ardea cinerea,,harmaahaikara,gråhäger,Grey Heron,Haikaralinnut,Haikarat,https://cdn.pixabay.com/photo/2019/06/10/21/38/heron-4265494__340.jpg
-ARDPUR,Ardea purpurea,,ruskohaikara,purpurhäger,Purple Heron,Haikaralinnut,Haikarat,
-ARDBAC,Ardeola bacchus,D,kiinanriisihaikara,bacchushäger,Chinese Pond Heron,Haikaralinnut,Haikarat,
-ARDGRA,Ardeola grayii,E,intianriisihaikara,rishäger,Indian Pond Heron,Haikaralinnut,Haikarat,
-CICNIG,Ciconia nigra,,mustahaikara,svart stork,Black Stork,Haikaralinnut,Kattohaikarat,
+ARDPUR,Ardea purpurea,,ruskohaikara,purpurhäger,Purple Heron,Haikaralinnut,Haikarat,https://cdn.pixabay.com/photo/2018/03/06/08/16/nature-3202825__480.jpg
+ARDBAC,Ardeola bacchus,D,kiinanriisihaikara,bacchushäger,Chinese Pond Heron,Haikaralinnut,Haikarat,https://cdn.pixabay.com/photo/2018/04/03/00/51/nature-3285626__340.jpg
+ARDGRA,Ardeola grayii,E,intianriisihaikara,rishäger,Indian Pond Heron,Haikaralinnut,Haikarat,https://cdn.pixabay.com/photo/2014/04/09/17/35/pond-320246__340.jpg
+CICNIG,Ciconia nigra,,mustahaikara,svart stork,Black Stork,Haikaralinnut,Kattohaikarat,https://cdn.pixabay.com/photo/2017/11/27/13/52/black-stork-2981385__340.jpg
 CICCIC,Ciconia ciconia,,kattohaikara,vit stork,White Stork,Haikaralinnut,Kattohaikarat,https://cdn.pixabay.com/photo/2015/05/28/21/42/stork-788666__340.jpg
-CICABD,Ciconia abdimii,E,savannihaikara,abdimstork,Abdim's Stork,Haikaralinnut,Kattohaikarat,
-PLEFAL,Plegadis falcinellus,,pronssi-iibis,bronsibis,Glossy Ibis,Haikaralinnut,Iibikset,
-PLALEU,Platalea leucorodia,,kapustahaikara,skedstork,Eurasian Spoonbill,Haikaralinnut,Iibikset,
-PHOROS,Phoenicopterus roseus,D,flamingo,större flamingo,Greater Flamingo,Flamingolinnut,Flamingot,
-PHOCHI,Phoenicopterus chilensis,E,chilenflamingo,chileflamingo,Chilean Flamingo,Flamingolinnut,Flamingot,
-PHOMIN,Phoenicopterus minor,E,pikkuflamingo,mindre flamingo,Lesser Flamingo,Flamingolinnut,Flamingot,
-PERAPI,Pernis apivorus,,mehiläishaukka,bivråk,European Honey Buzzard,Päiväpetolinnut,Haukat,
+CICABD,Ciconia abdimii,E,savannihaikara,abdimstork,Abdim's Stork,Haikaralinnut,Kattohaikarat,https://cdn.pixabay.com/photo/2016/09/17/11/54/bird-1675960__480.jpg
+PLEFAL,Plegadis falcinellus,,pronssi-iibis,bronsibis,Glossy Ibis,Haikaralinnut,Iibikset,https://cdn.pixabay.com/photo/2017/08/25/16/00/glossy-ibis-2680553__340.jpg
+PLALEU,Platalea leucorodia,,kapustahaikara,skedstork,Eurasian Spoonbill,Haikaralinnut,Iibikset,https://cdn.pixabay.com/photo/2022/03/31/10/22/bird-7102727__480.jpg
+PHOROS,Phoenicopterus roseus,D,flamingo,större flamingo,Greater Flamingo,Flamingolinnut,Flamingot,https://cdn.pixabay.com/photo/2019/07/01/16/51/bird-4310423__340.jpg
+PHOCHI,Phoenicopterus chilensis,E,chilenflamingo,chileflamingo,Chilean Flamingo,Flamingolinnut,Flamingot,https://cdn.pixabay.com/photo/2015/04/14/06/04/phoenicopterus-chilensis-721711__480.jpg
+PHOMIN,Phoenicopterus minor,E,pikkuflamingo,mindre flamingo,Lesser Flamingo,Flamingolinnut,Flamingot,https://cdn.pixabay.com/photo/2017/10/11/17/48/bird-2841881__340.jpg
+PERAPI,Pernis apivorus,,mehiläishaukka,bivråk,European Honey Buzzard,Päiväpetolinnut,Haukat,https://cdn.pixabay.com/photo/2014/04/02/11/21/bird-305840__480.jpg
 MILMIG,Milvus migrans,,haarahaukka,brun glada,Black Kite,Päiväpetolinnut,Haukat,https://cdn.pixabay.com/photo/2021/12/29/11/53/bird-6901465_960_720.jpg
-MILMIL,Milvus milvus,,isohaarahaukka,röd glada,Red Kite,Päiväpetolinnut,Haukat,
+MILMIL,Milvus milvus,,isohaarahaukka,röd glada,Red Kite,Päiväpetolinnut,Haukat,https://cdn.pixabay.com/photo/2018/04/22/13/52/red-kite-3341094__340.jpg
 HALLEU,Haliaeetus leucoryphus,B,aromerikotka,bandhavsörn,Pallas's Fish Eagle,Päiväpetolinnut,Haukat,https://cdn.pixabay.com/photo/2021/12/22/14/30/eagle-6887596__340.jpg
 HALALB,Haliaeetus albicilla,,merikotka,havsörn,White-tailed Eagle,Päiväpetolinnut,Haukat,https://cdn.pixabay.com/photo/2018/03/16/03/33/natural-3230134__340.jpg
 NEOPER,Neophron percnopterus,,pikkukorppikotka,smutsgam,Egyptian Vulture,Päiväpetolinnut,Haukat,https://cdn.pixabay.com/photo/2021/03/09/15/16/egyptian-vulture-6082122__340.jpg
@@ -131,7 +131,7 @@ AQUPOM,Aquila pomarina,,pikkukiljukotka,mindre skrikörn,Lesser Spotted Eagle,P�
 AQUPEN,Aquila pennata,,pikkukotka,dvärgörn,Booted Eagle,Päiväpetolinnut,Haukat,https://cdn.pixabay.com/photo/2015/02/25/17/07/booted-eagle-649070__480.jpg
 AQUCHR,Aquila chrysaetos,,maakotka,kungsörn,Golden Eagle,Päiväpetolinnut,Haukat,https://cdn.pixabay.com/photo/2020/05/22/12/13/eagle-5205176_960_720.jpg
 AQUNIP,Aquila nipalensis,,arokotka,stäppörn,Steppe Eagle,Päiväpetolinnut,Haukat,https://cdn.pixabay.com/photo/2016/08/07/19/26/steppe-eagle-1576944__340.jpg
-AQUHEL,Aquila heliaca,,keisarikotka,kejsarörn,Eastern Imperial Eagle,Päiväpetolinnut,Haukat,
+AQUHEL,Aquila heliaca,,keisarikotka,kejsarörn,Eastern Imperial Eagle,Päiväpetolinnut,Haukat,https://cdn.pixabay.com/photo/2019/03/23/18/49/bird-4075973__480.jpg
 HALPEL,Haliaeetus pelagicus,E,kuningasmerikotka,jättehavsörn,Steller's Sea Eagle,Päiväpetolinnut,Haukat,https://cdn.pixabay.com/photo/2018/03/17/12/42/bird-3233901__340.jpg
 PANHAL,Pandion haliaetus,,sääksi,fiskgjuse,Osprey,Päiväpetolinnut,Sääkset,https://cdn.pixabay.com/photo/2020/11/08/14/25/osprey-5723920__340.jpg
 FALNAU,Falco naumanni,,pikkutuulihaukka,rödfalk,Lesser Kestrel,Jalohaukkalinnut,Jalohaukat,
@@ -160,8 +160,8 @@ OTITAR,Otis tarda,B,isotrappi,stortrapp,Great Bustard,Kurkilinnut,Trapit,
 BUROED,Burhinus oedicnemus,,paksujalka,tjockfot,Stone-curlew,Rantalinnut,Paksujalat,https://cdn.pixabay.com/photo/2014/09/25/03/41/stone-curlew-459973__480.jpg
 HIMHIM,Himantopus himantopus,,pitkäjalka,styltlöpare,Black-winged Stilt,Rantalinnut,Avosetit,https://cdn.pixabay.com/photo/2018/11/23/14/51/bird-3834051__340.jpg
 RECAVO,Recurvirostra avosetta,,avosetti,skärfläcka,Pied Avocet,Rantalinnut,Avosetit,https://cdn.pixabay.com/photo/2018/03/23/13/00/pied-avocet-3253652__340.jpg
-HAEOST,Haematopus ostralegus,,meriharakka,strandskata,Oystercatcher,Rantalinnut,Meriharakat,
-PLUFUL,Pluvialis fulva,,siperiankurmitsa,sibirisk tundrapipare,Pacific Golden Plover,Rantalinnut,Kurmitsat,
+HAEOST,Haematopus ostralegus,,meriharakka,strandskata,Oystercatcher,Rantalinnut,Meriharakat,https://cdn.pixabay.com/photo/2021/05/01/08/34/oystercatcher-6220541__340.jpg
+PLUFUL,Pluvialis fulva,,siperiankurmitsa,sibirisk tundrapipare,Pacific Golden Plover,Rantalinnut,Kurmitsat,https://cdn.pixabay.com/photo/2019/09/29/11/37/pacific-golden-plover-4513125__340.jpg
 PLUDOM,Pluvialis dominica,,amerikankurmitsa,amerikansk tundrapipare,American Golden Plover,Rantalinnut,Kurmitsat,
 PLUAPR,Pluvialis apricaria,,kapustarinta,ljungpipare,Golden Plover,Rantalinnut,Kurmitsat,https://cdn.pixabay.com/photo/2022/04/21/04/06/birds-7146624__340.jpg
 PLUSQU,Pluvialis squatarola,,tundrakurmitsa,kustpipare,Grey Plover,Rantalinnut,Kurmitsat,https://cdn.pixabay.com/photo/2018/04/26/14/48/grey-plover-3352107__480.jpg
@@ -170,37 +170,37 @@ VANLEU,Vanellus leucurus,,suohyyppä,sumpvipa,White-tailed Lapwing,Rantalinnut,K
 VANVAN,Vanellus vanellus,,töyhtöhyyppä,tofsvipa,Northern Lapwing,Rantalinnut,Kurmitsat,https://cdn.pixabay.com/photo/2019/10/09/22/44/lapwing-4538298__340.jpg
 CHADUB,Charadrius dubius,,pikkutylli,mindre strandpipare,Little Ringed Plover,Rantalinnut,Kurmitsat,https://cdn.pixabay.com/photo/2021/06/30/03/19/little-ringed-plover-6375733__340.jpg
 CHAHIA,Charadrius hiaticula,,tylli,större strandpipare,Ringed Plover,Rantalinnut,Kurmitsat,https://cdn.pixabay.com/photo/2020/09/11/12/55/ringed-plover-5563083__340.jpg
-CHAALE,Charadrius alexandrinus,,mustajalkatylli,svartbent strandpipare,Kentish Plover,Rantalinnut,Kurmitsat,
-CHAMON,Charadrius mongolus,,ylänkötylli,mongolpipare,Lesser Sand Plover,Rantalinnut,Kurmitsat,
+CHAALE,Charadrius alexandrinus,,mustajalkatylli,svartbent strandpipare,Kentish Plover,Rantalinnut,Kurmitsat,https://cdn.pixabay.com/photo/2022/07/09/13/07/bird-7310863__340.jpg
+CHAMON,Charadrius mongolus,,ylänkötylli,mongolpipare,Lesser Sand Plover,Rantalinnut,Kurmitsat,https://cdn.pixabay.com/photo/2021/08/10/09/41/lesser-sand-plover-6535531__480.jpg
 CHALES,Charadrius leschenaultii,,aavikkotylli,ökenpipare,Greater Sand Plover,Rantalinnut,Kurmitsat,
 CHAASI,Charadrius asiaticus,,kaspiantylli,kaspisk pipare,Caspian Plover,Rantalinnut,Kurmitsat,
 CHAVER,Charadrius veredus,,gobintylli,orientpipare,Oriental Plover,Rantalinnut,Kurmitsat,
-CHAMOR,Charadrius morinellus,,keräkurmitsa,fjällpipare,Dotterel,Rantalinnut,Kurmitsat,
-BARLON,Bartramia longicauda,,preeriakahlaaja,piparsnäppa,Upland Sandpiper,Rantalinnut,Kurpat,
+CHAMOR,Charadrius morinellus,,keräkurmitsa,fjällpipare,Dotterel,Rantalinnut,Kurmitsat,https://cdn.pixabay.com/photo/2017/09/06/21/45/dotterel-2723150__480.jpg
+BARLON,Bartramia longicauda,,preeriakahlaaja,piparsnäppa,Upland Sandpiper,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2022/02/10/13/39/upland-sandpiper-7005358__480.jpg
 NUMMIN,Numenius minutus,,taigakuovi,dvärgspov,Little Curlew,Rantalinnut,Kurpat,
 NUMPHA,Numenius phaeopus,,pikkukuovi,småspov,Whimbrel,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2015/02/02/19/08/whimbrel-621376__480.jpg
 NUMARQ,Numenius arquata,,kuovi,storspov,Eurasian Curlew,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2016/02/28/08/46/eurasian-curlew-1226627__340.jpg
-LIMLIM,Limosa limosa,,mustapyrstökuiri,rödspov,Black-tailed Godwit,Rantalinnut,Kurpat,
+LIMLIM,Limosa limosa,,mustapyrstökuiri,rödspov,Black-tailed Godwit,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2018/09/02/10/55/black-tailed-godwit-3648526__340.jpg
 LIMLAP,Limosa lapponica,,punakuiri,myrspov,Bar-tailed Godwit,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2020/05/23/15/32/godwit-5210105__340.jpg
-AREINT,Arenaria interpres,,karikukko,roskarl,Ruddy Turnstone,Rantalinnut,Kurpat,
-CALCAN,Calidris canutus,,isosirri,kustsnäppa,Red Knot,Rantalinnut,Kurpat,
+AREINT,Arenaria interpres,,karikukko,roskarl,Ruddy Turnstone,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2020/09/22/08/25/ruddy-turnstone-5592307__340.jpg
+CALCAN,Calidris canutus,,isosirri,kustsnäppa,Red Knot,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2014/07/08/13/00/rufa-386883__340.jpg
 CALPUG,Calidris pugnax,,suokukko,brushane,Ruff,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2022/05/08/21/25/bird-7183023__340.jpg
 CALACU,Calidris acuminata,,suippopyrstösirri,spetsstjärtad snäppa,Sharp-tailed Sandpiper,Rantalinnut,Kurpat,
 CALFAL,Calidris falcinellus,,jänkäsirriäinen,myrsnäppa,Broad-billed Sandpiper,Rantalinnut,Kurpat,
 CALFER,Calidris ferruginea,,kuovisirri,spovsnäppa,Curlew Sandpiper,Rantalinnut,Kurpat,
 CALHIM,Calidris himantopus,,pitkäkoipisirri,styltsnäppa,Stilt Sandpiper,Rantalinnut,Kurpat,
-CALRCO,Calidris ruficollis,,rusokaulasirri,rödhalsad snäppa,Red-necked Stint,Rantalinnut,Kurpat,
+CALRCO,Calidris ruficollis,,rusokaulasirri,rödhalsad snäppa,Red-necked Stint,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2017/10/06/01/49/red-necked-stints-2821764_960_720.jpg
 CALSMI,Calidris subminuta,,siperiansirri,långtåsnäppa,Long-toed Stint,Rantalinnut,Kurpat,
-CALTEM,Calidris temminckii,,lapinsirri,mosnäppa,Temminck's Stint,Rantalinnut,Kurpat,
-CALALB,Calidris alba,,pulmussirri,sandlöpare,Sanderling,Rantalinnut,Kurpat,
-CALALP,Calidris alpina,,suosirri,kärrsnäppa,Dunlin,Rantalinnut,Kurpat,
-CALMAR,Calidris maritima,,merisirri,skärsnäppa,Purple Sandpiper,Rantalinnut,Kurpat,
-CALBAI,Calidris bairdii,,eskimosirri,gulbröstad snäppa,Baird's Sandpiper,Rantalinnut,Kurpat,
-CALUTA,Calidris minuta,,pikkusirri,småsnäppa,Little Stint,Rantalinnut,Kurpat,
+CALTEM,Calidris temminckii,,lapinsirri,mosnäppa,Temminck's Stint,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2022/06/04/11/33/temmincks-stint-7241766__480.jpg
+CALALB,Calidris alba,,pulmussirri,sandlöpare,Sanderling,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2022/02/07/08/17/sanderling-6998777__480.jpg
+CALALP,Calidris alpina,,suosirri,kärrsnäppa,Dunlin,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2018/10/14/16/08/dunlin-3746819__480.jpg
+CALMAR,Calidris maritima,,merisirri,skärsnäppa,Purple Sandpiper,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2020/11/29/20/57/ocean-beach-runner-5789080__480.jpg
+CALBAI,Calidris bairdii,,eskimosirri,gulbröstad snäppa,Baird's Sandpiper,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2022/04/01/22/34/bairds-sandpiper-7105831__340.jpg
+CALUTA,Calidris minuta,,pikkusirri,småsnäppa,Little Stint,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2018/10/14/16/06/bird-3746815__480.jpg
 CALFUS,Calidris fuscicollis,,valkoperäsirri,vitgumpsnäppa,White-rumped Sandpiper,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2021/10/18/07/25/bird-6720306__480.jpg
 CALLLA,Calidris minutilla,B,amerikansirri,dvärgsnäppa,Least Sandpiper,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2021/08/09/12/46/birds-6533260__480.jpg
-CALSRU,Calidris subruficollis,,tundravikla,prärielöpare,Buff-breasted Sandpiper,Rantalinnut,Kurpat,
-CALMEL,Calidris melanotos,,palsasirri,tuvsnäppa,Pectoral Sandpiper,Rantalinnut,Kurpat,
+CALSRU,Calidris subruficollis,,tundravikla,prärielöpare,Buff-breasted Sandpiper,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2022/01/25/17/14/buff-breasted-sandpiper-6966821__480.jpg
+CALMEL,Calidris melanotos,,palsasirri,tuvsnäppa,Pectoral Sandpiper,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2018/03/11/00/39/pectoral-sandpiper-3215721__480.jpg
 PHATRI,Phalaropus tricolor,,amerikanvesipääsky,wilsonsimsnäppa,Wilson's Phalarope,Rantalinnut,Kurpat,
 PHALOB,Phalaropus lobatus,,vesipääsky,smalnäbbad simsnäppa,Red-necked Phalarope,Rantalinnut,Kurpat,
 PHAFUL,Phalaropus fulicarius,,isovesipääsky,brednäbbad simsnäppa,Red Phalarope,Rantalinnut,Kurpat,
@@ -214,7 +214,7 @@ TRIFLA,Tringa flavipes,,keltajalkaviklo,mindre gulbena,Lesser Yellowlegs,Rantali
 TRISEM,Tringa semipalmata,,preeriaviklo,willet,Willet,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2021/09/10/00/17/willet-6611818__340.jpg
 TRISTA,Tringa stagnatilis,,lampiviklo,dammsnäppa,Marsh Sandpiper,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2018/03/23/06/29/bird-3252794__340.jpg
 TRIGLA,Tringa glareola,,liro,grönbena,Wood Sandpiper,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2014/04/06/05/41/wood-sandpiper-317558__340.jpg
-TRITOT,Tringa totanus,,punajalkaviklo,rödbena,Common Redshank,Rantalinnut,Kurpat,
+TRITOT,Tringa totanus,,punajalkaviklo,rödbena,Common Redshank,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2017/04/18/04/15/bird-2237639__340.jpg
 LYMMIN,Lymnocryptes minimus,,jänkäkurppa,dvärgbeckasin,Jack Snipe,Rantalinnut,Kurpat,
 LIMSCO,Limnodromus scolopaceus,,tundrakurppelo,större beckasinsnäppa,Long-billed Dowitcher,Rantalinnut,Kurpat,
 SCORUS,Scolopax rusticola,,lehtokurppa,morkulla,Woodcock,Rantalinnut,Kurpat,https://cdn.pixabay.com/photo/2021/09/27/18/05/woodcock-6661876_960_720.jpg
