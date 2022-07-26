@@ -41,10 +41,10 @@
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#" class="w3-bar-item w3-button">Uusi havainto</a>
     <a href="#static" class="w3-bar-item w3-button">Tilastot</a>
     <a href="#work" class="w3-bar-item w3-button">Linnut</a>
     <a href="#" class="w3-bar-item w3-button">Haku</a>
+    <a href="/logout" class="w3-bar-item w3-button">Kirjaudu ulos</a>
   </div>
 </div>
 
@@ -191,6 +191,8 @@
 
 <h2>OUR TEAM</h2>
 <p>Meet the team - our office kurpat:</p>
+<input type="text" id="myInput" onkeyup="mySearch()" placeholder="Hae nimellä...">
+
 
 <div class="w3-row"><br>
 
@@ -321,6 +323,28 @@ $('.bird-img').each(function(){
 	}
 		
 });
+</script>
+<script>
+// For search method to filter birds by written text
+function mySearch() {
+  // Declare variables
+  var input = document.getElementById('myInput');
+  var filter = input.value.toUpperCase();
+  
+  var birdimages = document.getElementsByClassName('bird-img');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (var i = 0; birdimages[i]; i++) {
+    console.log(birdimages[i]);
+	var birdname = birdimages[i].nextElementSibling.innerText;
+    console.log(birdname);
+    if (birdname.toUpperCase().indexOf(filter) > -1) {
+      birdimages[i].parentElement.style.display = "";
+    } else {
+      birdimages[i].parentElement.style.display = "none";
+    }
+  }
+}
 </script>
 
 
