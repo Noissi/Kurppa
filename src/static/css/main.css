@@ -2,10 +2,11 @@
     --my-percentage: 0;
     --my-percentage-left: 100;
     --my-blue: #2196F3;
+    --my-font: 'Roboto', sans-serif
 }
 
 .stat-number {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--my-font);
     font-size: 100px;
     color: var(--my-blue);
     text-align: center;
@@ -22,7 +23,7 @@
   display: grid;
   gap: 5px;
   padding: 5px;
-  grid-template-rows: 250px auto;
+  grid-template-rows: auto 250px;
   grid-template-columns: 20% 16% 16% 16% auto;
 }
 .grid-item {
@@ -35,15 +36,15 @@
 }
 .item2 {
   grid-column: 2;
-  grid-row: 1;
+  grid-row: 2;
 }
 .item3 {
   grid-column: 3;
-  grid-row: 1;
+  grid-row: 2;
 }
 .item4 {
   grid-column: 4;
-  grid-row: 1;
+  grid-row: 2;
 }
 .item5 {
   grid-column: 5;
@@ -51,7 +52,9 @@
 }
 .item6 {
   grid-column: 2 /span 3;
-  grid-row: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: row;
 }
 
 
@@ -153,17 +156,22 @@ input[type=submit] {
 /* Donut chart */
 .svg-item {
     width: 100%;
-	font-size: 16px;
-	margin: 0 auto;
-	animation: donutfade 1s;
+    font-size: 16px;
+    display: flex;
+    justify-content: right;
+    animation: donutfade 1s;
 }
 .donut-ring {
     stroke: #EBEBEB;
 }
+
+/*
 .donut-segment {
     transform-origin: center;
     stroke: #FF6200;
 }
+*/
+
 .donut-segment-2 {
     stroke: aqua;
     animation: donut1 3s;
@@ -191,6 +199,7 @@ input[type=submit] {
     }
     100% {
         stroke-dasharray: var(--my-percentage), var(--my-percentage-left);
+        /*stroke-dasharray: 20, 80;*/
     }
 }
 .donut-percent {
@@ -220,7 +229,6 @@ input[type=submit] {
     fill: #000;
     transform: translateY(0.25em);
 }
- 
 .donut-percent {
     font-size: 0.5em;
     line-height: 1;
@@ -236,6 +244,7 @@ input[type=submit] {
     font-family: arial;
     color: black;
     font-size: 15px;
+    position:center;
 }
 .work-process h3 {
     margin: 30px 0px 10px;
@@ -249,7 +258,7 @@ input[type=submit] {
 }
 .project-percent {
     height: 18px;
-    background-color: #2196F3;
+    background-color: var(--my-blue);
     border-radius: 30px;
     position: relative;
     width: 0;
@@ -264,12 +273,45 @@ input[type=submit] {
     padding: 1px 0px;
     color: black;
     font-size: 15px;
+    font-family: var(--my-font);
     border-radius: 25px;
     font-weight: bold;
     width: 20px;
     margin: 0px auto;
 }
-
+.project-bar-all {
+    height: 80px;
+    background: #e0e0e0;
+    border-radius: 30px;
+    margin: 5px;
+}
+.project-percent-all {
+    height: 80px;
+    background-color: var(--my-blue);
+    border-radius: 30px;
+    position: relative;
+    width: 0;
+    transition: 2s linear;
+    word-wrap: normal;
+}
+.project-percent-all::before {
+    content: attr(percent);
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    padding: 1px 0px;
+    color: black;
+    font-size: 55px;
+    font-family: var(--my-font);
+    border-radius: 25px;
+    font-weight: bold;
+    width: 20px;
+    margin: 0px auto;
+}
+.add-button {
+  margin: auto;
+  display: flex;
+}
 
 /* Search */
 #myInput {
@@ -277,8 +319,8 @@ input[type=submit] {
   background-position: 10px 12px; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
   background-color: white;
-  width: 25%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
+  width: 25%;
+  font-size: 16px;
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
