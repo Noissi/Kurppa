@@ -17,7 +17,7 @@
 <body id="myPage">
 
 <!-- Sidebar on click -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+<nav id="mySidebar" class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
     <i class="fa fa-remove"></i>
   </a>
@@ -34,7 +34,7 @@
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Uusi havainto</a>
   <a href="#static" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Tilastot</a>
-  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Linnut</a>
+  <a href="#birds" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Linnut</a>
   <a href="/logout" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">Kirjaudu ulos</a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
  </div>
@@ -42,7 +42,7 @@
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
     <a href="#static" class="w3-bar-item w3-button">Tilastot</a>
-    <a href="#work" class="w3-bar-item w3-button">Linnut</a>
+    <a href="#birds" class="w3-bar-item w3-button">Linnut</a>
     <a href="#" class="w3-bar-item w3-button">Haku</a>
     <a href="/logout" class="w3-bar-item w3-button">Kirjaudu ulos</a>
   </div>
@@ -50,51 +50,51 @@
 
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
-  <img src="/static/images/kurppa.jpg" alt="header" style="width:100%;min-height:120px;max-height:150px;">
+  <img src="/static/images/kurpat.png" alt="header" style="width:100%;min-height:120px;max-height:150px;">
 </div>
 
 <!-- Modal -->
-<div id="id01" class="w3-modal">
+<div id="modal" class="w3-modal">
   <div class="w3-modal-content w3-card-4 w3-animate-top">
     <header class="w3-container w3-teal w3-display-container"> 
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+      <span onclick="document.getElementById('modal').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
       <h4>Lisää uusi lintuhavainto</h4>
       <h5>Vaikkapa kurppa <i class="fa fa-smile-o"></i></h5>
     </header>
+	
     <div class="w3-container">
-
       <form action="/add-sight" method="POST" class="w3-text-teal" autocomplete="off">
 		<label for="name">Laji:</label>
 		<div class="autocomplete" style="width:300px;">
-		  <input class="autocomplete-text" id="birdname" type="text" name="birdname" placeholder="lintulaji">
+		  <input id="birdname" class="autocomplete-text" type="text" name="birdname" placeholder="lintulaji">
 	    </div>
 		<br>
 		<label for="date">Aika:</label>
-		<input type="date" id="date" name="date">
+		<input id="date" type="date" name="date">
 		<br>
 		<input type="submit" value="Lähetä">
 	  </form>
-	  
     </div>
-    <footer class="w3-container w3-teal">
-      <p>Modal footer</p>
-    </footer>
+
   </div>
 </div>
 
 <!-- Statics Container -->
-<div class="grid-container w3-padding-24" id="static">
+<div id="static" class="grid-container w3-padding-24">
     <div class="grid-item item1">
 	  <div class="articles card">
 		<div class="card-header d-flex align-items-center">
-		  <h2 class="h3">Viimeisimmät havainnot</h2>
+		  <h3>Viimeisimmät havainnot</h3>
 		</div>
 		<div class="card-body no-padding">
 			{% for sight in sights10 %}
-			<div class="item d-flex align-items-center">
-			<div class="image"><img src="/static/images/kurppa.jpg" alt="..." class="img-fluid rounded-circle"></div>
-			<div class="text"><a href="#">
-				<h3 class="h5">{{ sight.name_fi }}</h3></a><small>{{ sight.date.strftime("%d.%m.%Y %H:%M") }}</small></div>
+			<div class="sight d-flex align-items-center">
+				<div class="image">
+				    <img src="/static/images/kurppa.jpg" alt="..." class="img-fluid rounded-circle">
+				</div>
+				<div class="text"><a href="#">
+					<h3 class="h5">{{ sight.name_fi }}</h3></a><small>{{ sight.date.strftime("%d.%m.%Y %H:%M") }}</small>
+				</div>
 			</div>
 			{% endfor %}
 		</div>
@@ -103,7 +103,7 @@
 	<div class="grid-item item2">
 		<div class="articles card">
 		  <div class="card-header d-flex align-items-center">
-			<h2 class="h3">Tänään</h2>
+			<h3>Tänään</h3>
 		  </div>
 		  <div class="card-body no-padding">
 			<p class="stat-number">{{score_day}}</p>
@@ -113,7 +113,7 @@
 	<div class="grid-item item3">
 		<div class="articles card">
 		  <div class="card-header d-flex align-items-center">
-			<h2 class="h3">Tässä kuussa</h2>
+			<h3>Tässä kuussa</h3>
 		  </div>
 		  <div class="card-body no-padding">
 			<p class="stat-number">{{score_month}}</p>
@@ -123,7 +123,7 @@
 	<div class="grid-item item4">
 		<div class="articles card">
 		  <div class="card-header d-flex align-items-center">
-			<h2 class="h3">Tänä vuonna</h2>
+			<h3>Tänä vuonna</h3>
 		  </div>
 		  <div class="card-body no-padding">
 			<p class="stat-number">{{score_year}}</p>
@@ -133,19 +133,16 @@
     <div class="grid-item item5">
 		<div class="articles card">
 		  <div class="card-header d-flex align-items-center">
-			<h2 class="h3">Lahkoittain</h2>
+			<h3>Lahkoittain</h3>
 		  </div>
 		  <div class="card-body no-padding">
 			<!-- Progress Bar -->
-			<div class="work-process">
+			<div class="work-progress">
 				{% for orderr in orderrs %}
-				<div class="project">
 					<span class="orderr" style="float:left">{{orderr}}</span>
-					<div class="project-bar">
-						<div id="progress-bar" class="project-percent" percent="0/0">
-						</div>
+					<div class="progress-bar">
+						<div class="progress-percent" percent="0/0"></div>
 					</div>
-				</div>
 				{% endfor %}
 			</div>
 		  </div>
@@ -153,14 +150,14 @@
 	</div>
     <div class="grid-item item6">
 	    <div class="add-button">
-		  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="addsight">LISÄÄ HAVAINTO</button>
+		  <button onclick="document.getElementById('modal').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="addsight">LISÄÄ HAVAINTO</button>
 		</div>
 		<div class="svg-item">
 		  <svg width="70%" viewBox="0 0 40 40" class="donut">
 			<circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
 			<circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5"></circle>
-			<circle id="circle" class="donut-segment donut-segment-2" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5" stroke-dasharray="0 100" stroke-dashoffset="25"></circle>
-			<g class="donut-text donut-text-1">
+			<circle id="circle" class="donut-segment" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5" stroke-dasharray="0 100" stroke-dashoffset="25"></circle>
+			<g class="donut-text">
 			<text y="50%" transform="translate(0, 2)">
 			  <tspan x="50%" text-anchor="middle" class="donut-percent">{{percentage}}%</tspan>   
 			</text>
@@ -174,44 +171,29 @@
 </div>
 
 
-<!-- Team Container -->
-<div class="w3-container w3-padding-64 w3-center" id="team">
+<!-- Bird Container -->
+<div id="birds" class="w3-container w3-padding-64 w3-center">
+	<h2>LINNUT</h2>
+	<p>Meet the team - our office kurpat:</p>
+	<input type="text" id="myInput" onkeyup="mySearch()" placeholder="Hae nimellä...">
 
-<h2>LINNUT</h2>
-<p>Meet the team - our office kurpat:</p>
-<input type="text" id="myInput" onkeyup="mySearch()" placeholder="Hae nimellä...">
-
-
-<div class="w3-row"><br>
-
-<hr>
-{% for bird in birds %}
-<div class="w3-col s2">
-  <img src="{{bird.image}}" alt="kurppa" style="width:70%; margin-top:30px" class="bird-img w3-circle">
-  <h3 style="margin-bottom: 0px;margin-top: 7px;">{{bird.name_fi}}</h3>
-  <p>{{bird.name_lat}}</p>
-</div>
-{% endfor %}
-
-</div>
-</div>
-
-<!-- Work Row -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
-	<div class="w3-quarter">
-	<h2>Kurppamme</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<div class="w3-row"><br>
+		<hr>
+		{% for bird in birds %}
+		<div class="w3-col s2">
+		  <img src="{{bird.image}}" alt="kurppa" style="width:70%; margin-top:30px" class="bird-img w3-circle">
+		  <h3 style="margin-bottom: 0px;margin-top: 7px;">{{bird.name_fi}}</h3>
+		  <p>{{bird.name_lat}}</p>
+		</div>
+		{% endfor %}
 	</div>
 </div>
-
-<!-- Image of location/map -->
-<img src="/static/images/kurppa.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
   <h4>Kurpeti kurp</h4>
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Ylös</span>
     <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
@@ -219,130 +201,36 @@
 
 
 
-
 <!-- Javascript -->
+<script src="/static/javascript/sidenavigation.js"></script>
 <script src="/static/javascript/autocomplete.js"></script>
-<script>
-window.onload = function() {
-  animateCircle();
-}
-</script>
-<script>
-// Script for side navigation
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "300px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
-
-// Close side navigation
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-<script>
-// Script for autocomplete
-autocomplete(document.getElementById("birdname"), JSON.parse({{birdnames_json|tojson}}));
-</script>
-<script>
-// Script for percentage circle
-function animateCircle(){
-    var number = 100 - {{percentage}};
-
-	document.documentElement.style.setProperty('--my-percentage', {{percentage}});
-	document.documentElement.style.setProperty('--my-percentage-left', number);
-	document.getElementById('circle').setAttribute("stroke-dasharray", {{percentage}} + " " + number);
-};
-</script>
-
+<script src="/static/javascript/animatecircle.js"></script>
+<script src="/static/javascript/orderprogress.js"></script>
+<script src="/static/javascript/birdsearch.js"></script>
+<script src="/static/javascript/sights.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 <script>
-var orderr_dict = {{orderr_statics|tojson}}
-var orderrnum_dict = {{orderr_nums|tojson}}
-
-$('.project-percent').each(function(){
-// Script for progress bar layout
-
-// Modified from https://www.markuptag.com/jquery-animated-progress-bar-with-percentage-counter/
-    var $this = $(this);
-	
-	var orderr = this.parentElement.previousElementSibling.textContent
-	
-	var percent = 0
-	var numtext = 0
-	if (orderr in orderr_dict) {
-		var percent = 100 * orderr_dict[orderr] / orderrnum_dict[orderr];
-		var numtext = orderr_dict[orderr];
-	}
-	
-    //$this.attr('percent', numtext);
-    $this.css("width",percent+'%');
-    $({animatedValue: 0}).animate({animatedValue: numtext},{
-        duration: 2000,
-        step: function(){
-            $this.attr('percent', numtext + "/" + orderrnum_dict[orderr]);
-        },
-        complete: function(){
-            $this.attr('percent', numtext + "/" + orderrnum_dict[orderr]);
-        }
-		
-    });
-});
-</script>
-<script>
-var unique_sights = {{unique_sights|tojson}}
-
-$('.bird-img').each(function(){
-// Script for bird list
-
-    var $this = $(this);
-	
-	var bird = this.nextElementSibling.textContent
-	if (!unique_sights.includes(bird)) {
-	    $this.css("filter", "grayscale(1)");
-		var name = $this[0].nextElementSibling;
-	    $(name).css('color', 'grey');
-	    $(name.nextElementSibling).css('color', 'grey');
-	}
-	
-	if ($this.attr("src") == "None") {
-	    $this.attr("src", "/static/images/bird_placeholder.jpg");
-	}
-		
-});
-</script>
-<script>
-// For search method to filter birds by written text
-function mySearch() {
-  // Declare variables
-  var input = document.getElementById('myInput');
-  var filter = input.value.toUpperCase();
+  // Inputs
+  var percentage = {{percentage}};
+  var orderr_dict = {{orderr_statics|tojson}}
+  var orderrnum_dict = {{orderr_nums|tojson}}
+  var unique_sights = {{unique_sights|tojson}}
   
-  var birdimages = document.getElementsByClassName('bird-img');
-
-  // Loop through all list items, and hide those who don't match the search query
-  for (var i = 0; birdimages[i]; i++) {
-	var birdname = birdimages[i].nextElementSibling.innerText;
-    if (birdname.toUpperCase().indexOf(filter) > -1) {
-      birdimages[i].parentElement.style.display = "";
-    } else {
-      birdimages[i].parentElement.style.display = "none";
-    }
+  window.onload = function() {
+  
+  animateCircle(percentage);
+  birdImages($('.bird-img'), unique_sights);
+  // Script for autocomplete
+  autocomplete(document.getElementById("birdname"), JSON.parse({{birdnames_json|tojson}}));
+  
   }
-}
-</script>
+  
+  $('.progress-percent').each(function(){
+		orderProgress.bind(this)(orderr_dict, orderrnum_dict);
+	});
 
+</script>
 
 </body>
 </html>

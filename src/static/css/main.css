@@ -5,6 +5,26 @@
     --my-font: 'Roboto', sans-serif
 }
 
+
+body{
+    margin-top:20px;
+    background:#eee;
+}
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+
 .stat-number {
     font-family: var(--my-font);
     font-size: 100px;
@@ -59,10 +79,6 @@
 
 
 /* Recent sights */
-body{
-    margin-top:20px;
-    background:#eee;
-}
 .card {
     height: 100%;
 }
@@ -72,58 +88,44 @@ body{
     margin-bottom: 0;
     color: #555
 }
-.articles .item {
+.articles .sight{
     padding: 5px;
     line-height: 1;
 }
-.articles .item:nth-of-type(even) {
+.articles .sight:nth-of-type(even) {
     background: #fafafa
 }
-.articles .item .image {
+.articles .sight .image {
     min-width: 50px;
     max-width: 50px;
     height: 50px;
     margin-right: 15px
 }
-.articles .item img {
+.articles .sight img {
     padding: 3px;
     border: 1px solid #28a745
 }
-.articles .item h3 {
+.articles .sight h3 {
     color: #555;
     font-weight: bold;
     margin-bottom: 0;
     font-size: 1;
 }
-.articles .item small {
+.articles .sight small {
     color: #aaa;
     font-size: 0.5em
 }
 
 
 /* Autocomplete */
-* { box-sizing: border-box; }
-.autocomplete-text {
-  font: 16px Arial;
-}
+/** { box-sizing: border-box; }*/
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
   display: inline-block;
 }
-input {
-  border: 1px solid transparent;
-  background-color: #f1f1f1;
-  padding: 10px;
-  font-size: 16px;
-}
-input[type=text] {
-  background-color: #f1f1f1;
-  width: 100%;
-}
-input[type=submit] {
-  background-color: DodgerBlue;
-  color: #fff;
+.autocomplete-text {
+  font: 16px Arial;
 }
 .autocomplete-items {
   position: absolute;
@@ -143,7 +145,6 @@ input[type=submit] {
   border-bottom: 1px solid #d4d4d4;
 }
 .autocomplete-items div:hover {
-  /*when hovering an item:*/
   background-color: #e9e9e9;
 }
 .autocomplete-active {
@@ -164,15 +165,8 @@ input[type=submit] {
 .donut-ring {
     stroke: #EBEBEB;
 }
-
-/*
 .donut-segment {
     transform-origin: center;
-    stroke: #FF6200;
-}
-*/
-
-.donut-segment-2 {
     stroke: aqua;
     animation: donut1 3s;
 }
@@ -204,6 +198,10 @@ input[type=submit] {
 }
 .donut-percent {
     animation: donutfadelong 1s;
+    font-size: 0.5em;
+    line-height: 1;
+    transform: translateY(0.5em);
+    font-weight: bold;
 }
 .donut-data {
     font-size: 0.12em;
@@ -217,9 +215,6 @@ input[type=submit] {
 }
 .donut-text {
     font-family: Arial, Helvetica, sans-serif;
-    fill: #FF6200;
-}
-.donut-text-1 {
     fill: aqua;
 }
 .donut-label {
@@ -229,16 +224,10 @@ input[type=submit] {
     fill: #000;
     transform: translateY(0.25em);
 }
-.donut-percent {
-    font-size: 0.5em;
-    line-height: 1;
-    transform: translateY(0.5em);
-    font-weight: bold;
-}
 
 
 /* Progress bar */
-.work-process {
+.work-progress {
     max-width: 500px;
     margin: 50px auto;
     font-family: arial;
@@ -246,17 +235,17 @@ input[type=submit] {
     font-size: 15px;
     position:center;
 }
-.work-process h3 {
+.work-progress h3 {
     margin: 30px 0px 10px;
 }
-.project-bar {
+.progress-bar {
     height: 18px;
     background: #e0e0e0;
     border-radius: 30px;
     margin: 5px;
     margin-left: 120px;
 }
-.project-percent {
+.progress-percent {
     height: 18px;
     background-color: var(--my-blue);
     border-radius: 30px;
@@ -265,7 +254,7 @@ input[type=submit] {
     transition: 2s linear;
     word-wrap: normal;
 }
-.project-percent::before {
+.progress-percent::before {
     content: attr(percent);
     position: absolute;
     right: 0px;
@@ -279,35 +268,8 @@ input[type=submit] {
     width: 20px;
     margin: 0px auto;
 }
-.project-bar-all {
-    height: 80px;
-    background: #e0e0e0;
-    border-radius: 30px;
-    margin: 5px;
-}
-.project-percent-all {
-    height: 80px;
-    background-color: var(--my-blue);
-    border-radius: 30px;
-    position: relative;
-    width: 0;
-    transition: 2s linear;
-    word-wrap: normal;
-}
-.project-percent-all::before {
-    content: attr(percent);
-    position: absolute;
-    right: 0px;
-    left: 0px;
-    padding: 1px 0px;
-    color: black;
-    font-size: 55px;
-    font-family: var(--my-font);
-    border-radius: 25px;
-    font-weight: bold;
-    width: 20px;
-    margin: 0px auto;
-}
+
+/* Add sight */
 .add-button {
   margin: auto;
   display: flex;
