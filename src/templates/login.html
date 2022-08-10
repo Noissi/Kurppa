@@ -1,24 +1,30 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <title>Kurppa - Kirjaudu</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-        <title>Kurppa</title>
     </head>
     <body>
+	    <!-- Navbar -->
+		<div class="w3-top">
+		  <div class="w3-bar w3-theme-d2 w3-left-align">
+		    <a href="/" class="w3-bar-item w3-hide-small w3-display-middle">Kurppa</a>
+		    <a class="w3-bar-item w3-hide-small w3-left" style="color: black; cursor: default">Kurppa</a>
+		  </div>
+        </div>
+ 
         <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto my-auto">
             <div class="row">
-                <div class="col-6">
-                    <div class="px-3 justify-content-center mt-4 mb-5 border-line"> <img src="static/images/kurppa.jpg" class="image"> </div>
-                    <h3 style="text-align:center">Ota osaa kurppailuun!</h3>
-                </div>
                 <div class="login-box card border-0 px-4 py-5">
                     
-		{% if  error %}
-		<p class="text-danger" style="position: absolute; Top: 5%">{{ error }}</p>
-		{% endif %}
+					{% if  error %}
+					<p class="text-danger" style="position: absolute; Top: 5%">{{ error }}</p>
+					{% endif %}
 
                     <form action="/login" method="POST">
                         <div class="row px-3">

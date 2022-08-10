@@ -41,7 +41,7 @@ class SightRepository:
     def get_sights_10(self, username):
         """Returns 10 recent sights from the user."""
         
-        sql = "SELECT * FROM sights WHERE username=:username ORDER BY date DESC LIMIT 10"
+        sql = "SELECT * FROM sights WHERE username=:username ORDER BY sight_id DESC LIMIT 10"
         result = db.session.execute(sql, {"username":username})
         sights = result.fetchall()
         return sights

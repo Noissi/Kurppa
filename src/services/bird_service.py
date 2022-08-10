@@ -18,6 +18,11 @@ class BirdService:
         birds = self._bird_repository.get_birds()
         return birds
 
+    def get_birds_list(self):
+        birds_tuple = self.get_birds()
+        birds = [list(row) for row in birds_tuple]
+        return birds
+
     def get_birdnames(self):
         """ Get list of bird names in Finnish."""
 

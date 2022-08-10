@@ -14,6 +14,12 @@ class UserService:
 
         self._user_repository = user_repository
 
+    def get_user(self, username):
+        """ Get a user by username."""
+
+        user = self._user_repository.get_user(username)
+        return user
+
     def login(self, username, password):
         """ Log in user if valid combination."""
         
@@ -39,7 +45,7 @@ class UserService:
     	if password == "" or len(password) < 5:
     	    return False, "Salasanassa oltava vähintään 5 merkkiä"
 
-    	user = self._user_repository.get_user(username)
+    	user = self._user_repository.get_user_lower(username)
     	if not user:
     	    hash_value = generate_password_hash(password)
     	    new_user = UserAccount(username, hash_value)

@@ -23,7 +23,15 @@ class UserRepository:
         """Returns a user with given username."""
         
         sql = "SELECT * FROM accounts WHERE username=:username"
-        result = db.session.execute(sql, {"username":username})
+        result = db.session.execute(sql, {"username": username})
+        user = result.fetchone()
+        return user
+
+    def get_user_lower(self, username):
+        """Returns a user with given username."""
+        
+        sql = "SELECT * FROM accounts WHERE LOWER(username)=:username"
+        result = db.session.execute(sql, {"username": username.lower()})
         user = result.fetchone()
         return user
 

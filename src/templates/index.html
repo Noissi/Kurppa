@@ -11,32 +11,21 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" id="bootstrap-css">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
 
 </head>
 <body id="myPage">
-
-<!-- Sidebar on click -->
-<nav id="mySidebar" class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
-    <i class="fa fa-remove"></i>
-  </a>
-  <a href="#" class="w3-bar-item w3-button">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button">Link 3</a>
-  <a href="#" class="w3-bar-item w3-button">Link 4</a>
-  <a href="#" class="w3-bar-item w3-button">Link 5</a>
-</nav>
 
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Uusi havainto</a>
-  <a href="#static" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Tilastot</a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Havainnot</a>
+  <a href="#" onclick="document.getElementById('modal').style.display='block'; setCurrentDate()" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Lisää havainto</a>
   <a href="#birds" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Linnut</a>
+  <a class="w3-bar-item w3-hide-small w3-display-middle">Hei {{username}}</a>
   <a href="/logout" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">Kirjaudu ulos</a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+  <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>-->
  </div>
 
   <!-- Navbar on small screens -->
@@ -48,28 +37,23 @@
   </div>
 </div>
 
-<!-- Image Header -->
-<div class="w3-display-container w3-animate-opacity">
-  <img src="/static/images/kurpat.png" alt="header" style="width:100%;min-height:120px;max-height:150px;">
-</div>
-
 <!-- Modal -->
 <div id="modal" class="w3-modal">
   <div class="w3-modal-content w3-card-4 w3-animate-top">
     <header class="w3-container w3-teal w3-display-container"> 
-      <span onclick="document.getElementById('modal').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+      <span id="close" onclick="document.getElementById('modal').style.display='none'; document.getElementById('bird-form').reset()" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
       <h4>Lisää uusi lintuhavainto</h4>
       <h5>Vaikkapa kurppa <i class="fa fa-smile-o"></i></h5>
     </header>
 	
     <div class="w3-container">
-      <form action="/add-sight" method="POST" class="w3-text-teal" autocomplete="off">
-		<label for="name">Laji:</label>
+      <form id="bird-form" action="/add-sight" method="POST" class="w3-text-teal" autocomplete="off">
+		<label for="birdname">Laji:</label>
 		<div class="autocomplete" style="width:300px;">
 		  <input id="birdname" class="autocomplete-text" type="text" name="birdname" placeholder="lintulaji">
 	    </div>
 		<br>
-		<label for="date">Aika:</label>
+		<label for="date">Päivä:</label>
 		<input id="date" type="date" name="date">
 		<br>
 		<input type="submit" value="Lähetä">
@@ -80,7 +64,7 @@
 </div>
 
 <!-- Statics Container -->
-<div id="static" class="grid-container w3-padding-24">
+<div id="static" class="statistics grid-container">
     <div class="grid-item item1">
 	  <div class="articles card">
 		<div class="card-header d-flex align-items-center">
@@ -89,11 +73,12 @@
 		<div class="card-body no-padding">
 			{% for sight in sights10 %}
 			<div class="sight d-flex align-items-center">
-				<div class="image">
-				    <img src="/static/images/kurppa.jpg" alt="..." class="img-fluid rounded-circle">
+				<div class="sight-image">
+				    <img src="/static/images/bird_placeholder.jpg" alt="..." class="rounded-circle">
 				</div>
-				<div class="text"><a href="#">
-					<h3 class="h5">{{ sight.name_fi }}</h3></a><small>{{ sight.date.strftime("%d.%m.%Y %H:%M") }}</small>
+				<div class="text">
+				    <a href="#"><h3 class="h5">{{ sight.name_fi }}</h3></a>
+					<small>{{ sight.date.strftime("%d.%m.%Y %H:%M") }}</small>
 				</div>
 			</div>
 			{% endfor %}
@@ -149,8 +134,8 @@
 		</div>
 	</div>
     <div class="grid-item item6">
-	    <div class="add-button">
-		  <button onclick="document.getElementById('modal').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="addsight">LISÄÄ HAVAINTO</button>
+	    <div class="sight-button">
+		  <button class="add-button" onclick="document.getElementById('modal').style.display='block'; setCurrentDate()" title="addsight">LISÄÄ HAVAINTO</button>
 		</div>
 		<div class="svg-item">
 		  <svg width="70%" viewBox="0 0 40 40" class="donut">
@@ -158,6 +143,10 @@
 			<circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5"></circle>
 			<circle id="circle" class="donut-segment" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5" stroke-dasharray="0 100" stroke-dashoffset="25"></circle>
 			<g class="donut-text">
+			<circle class="donut-edge" cx="20" cy="20" r="17.6" fill="transparent" stroke-width="0.2"></circle>
+			<text y="30%" transform="translate(0, 2)">
+			  <tspan x="50%" text-anchor="middle" class="donut-data">Elämänpisteet</tspan>   
+			</text>
 			<text y="50%" transform="translate(0, 2)">
 			  <tspan x="50%" text-anchor="middle" class="donut-percent">{{percentage}}%</tspan>   
 			</text>
@@ -200,7 +189,6 @@
 </footer>
 
 
-
 <!-- Javascript -->
 <script src="/static/javascript/sidenavigation.js"></script>
 <script src="/static/javascript/autocomplete.js"></script>
@@ -208,7 +196,10 @@
 <script src="/static/javascript/orderprogress.js"></script>
 <script src="/static/javascript/birdsearch.js"></script>
 <script src="/static/javascript/sights.js"></script>
+<script src="/static/javascript/getbirdimage.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
 
 <script>
   // Inputs
@@ -216,20 +207,59 @@
   var orderr_dict = {{orderr_statics|tojson}}
   var orderrnum_dict = {{orderr_nums|tojson}}
   var unique_sights = {{unique_sights|tojson}}
+  var birds = {{birds_list|tojson}}
+  var birdnames = JSON.parse({{birdnames_json|tojson}})
   
   window.onload = function() {
   
   animateCircle(percentage);
   birdImages($('.bird-img'), unique_sights);
   // Script for autocomplete
-  autocomplete(document.getElementById("birdname"), JSON.parse({{birdnames_json|tojson}}));
+  autocomplete(document.getElementById("birdname"), birdnames);
   
   }
-  
+
   $('.progress-percent').each(function(){
 		orderProgress.bind(this)(orderr_dict, orderrnum_dict);
-	});
+  });
 
+  $('.sight-image').each(function(){
+		getBirdImage.bind(this)(birds);
+  });
+  
+  // Validation
+  $.validator.addMethod("mustBeBirdname", function(value, element) {
+	return $.inArray(value, birdnames) >= 0;
+    }, 
+    "Lajin täytyy löytyä listalta."
+  );
+  $("#bird-form").validate({ 
+	rules: {
+		birdname: {
+			required: true, 
+			mustBeBirdname: true
+		},
+		date: {
+            required: true, 
+            date: true
+	    }
+	},
+	messages: {
+		birdname: "Lajin täytyy löytyä listalta.",
+		date: "Päivämäärä virheellinen."
+	},
+	onkeyup: false,
+	onclick: false,
+    onfocusout: false 
+  });
+  
+  // Current date
+  function setCurrentDate() {
+	  var date = new Date();
+	  var currentDate = date.toISOString().slice(0,10);
+	  var currentTime = date.getHours() + ':' + date.getMinutes();
+	  document.getElementById('date').value = currentDate;
+  }
 </script>
 
 </body>

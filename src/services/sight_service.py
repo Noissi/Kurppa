@@ -12,22 +12,23 @@ class SightService:
 
         self._sight_repository = sight_repository
 
-    def add_sight(self, name, date, user, place="", amount=1):
+    def add_sight(self, birdnames, birdname, date, user, place="", amount=1):
         """ Add a new sight to the user."""
-
-        username = user.get_username()
-        sight = Sight(name, date, place, amount, username)
-        exists = self.get_sight_by_name(name, user)
-        self._sight_repository.add_sight(sight)
-        #user.add_sight(sight)
-        if not exists:
-            user.increase_score()
+        if birdname in birdnames:
+            username = user.get_username()
+            sight = Sight(birdname, date, place, amount, username)
+            exists = self.get_sight_by_name(birdname, user)
+            self._sight_repository.add_sight(sight)
+            #user.add_sight(sight)
+            if not exists:
+                user.increase_score()
 
     def get_sights(self, user):
         """ Get list of sights from user."""
 
         sights = self._sight_repository.get_sights(user.get_username())
-        return sights
+        sights_list = [list(x) for x in sights]
+        return sights_list
 
     def get_sight_by_name(self, birdname, user):
         """ Get list of sights with given bird name from user."""
@@ -51,7 +52,7 @@ class SightService:
     def get_score_db(self, user):
         """ Get the amount of unique sights from user."""
 
-        score = len(self.get_unique_sights(user.get_username()))
+        score = len(self.get_unique_sights(user))
         return score
 
     def get_score_year(self, user):

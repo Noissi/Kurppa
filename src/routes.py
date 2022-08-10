@@ -14,11 +14,13 @@ def index():
 
     user = user_service.from_json(session["user"])
     score = user.get_score()
+    username = user.get_username()
     score_year = sight_service.get_score_year(user)
     score_month = sight_service.get_score_month(user)
     score_day = sight_service.get_score_day(user)
     sights10 = sight_service.get_sights_10(user)
     unique_sights = sight_service.get_unique_sights(user)
+    birds_list = bird_service.get_birds_list()
     birds = bird_service.get_birds()
     birdnames = bird_service.get_birdnames()
     birdnames_json = bird_service.to_json(birdnames)
@@ -27,11 +29,12 @@ def index():
     orderr_nums = bird_service.get_birdnums_in_orderrs()
     orderr_statics = sight_service.get_orderr_statics(orderrs, user)
 
-    return render_template("index.html", sights10=sights10,
-                            unique_sights=unique_sights,
+    return render_template("index.html", username=username,
+                            sights10=sights10, unique_sights=unique_sights,
                             score=score, score_year=score_year,
                             score_month=score_month, score_day=score_day,
-                            birds=birds, birdnames_json=birdnames_json,
+                            birds=birds, birds_list=birds_list,
+                            birdnames_json=birdnames_json,
                             percentage=percentage, orderrs=orderrs, 
                             orderr_nums=orderr_nums, orderr_statics=orderr_statics)
 
@@ -62,6 +65,7 @@ def login():
     success, error = user_service.login(username, password)
     if success:
         user = UserAccount(username, password)
+        user.set_score(sight_service.get_score_db(user))
         user_json = user_service.to_json(user)
         session["user"] = user_json
         return redirect("/")
@@ -82,7 +86,8 @@ def add():
     date = request.form["date"]
 
     user = user_service.from_json(session["user"])
-    sight_service.add_sight(birdname, date, user)
+    birdnames = bird_service.get_birdnames()
+    sight_service.add_sight(birdnames, birdname, date, user)
     user_json = user_service.to_json(user)
     session["user"] = user_json
     return redirect("/")
