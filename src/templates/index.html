@@ -18,21 +18,29 @@
 
 <!-- Navbar -->
 <div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Havainnot</a>
-  <a href="#" onclick="document.getElementById('modal').style.display='block'; setCurrentDate()" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Lisää havainto</a>
-  <a href="#birds" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Linnut</a>
-  <a class="w3-bar-item w3-hide-small w3-display-middle">Hei {{username}}</a>
-  <a href="/logout" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">Kirjaudu ulos</a>
-  <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>-->
- </div>
+  <div class="w3-bar w3-theme-d2 w3-left-align w3-hide-medium">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Havainnot</a>
+    <a href="#" onclick="document.getElementById('modal').style.display='block'; setCurrentDate()" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Lisää havainto</a>
+    <a href="#birds" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Linnut</a>
+    <a class="w3-bar-item w3-hide-small w3-display-middle">Hei {{username}}</a>
+    <a href="/logout" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">Kirjaudu ulos</a>
+    <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>-->
+  </div>
+
+  <!-- Navbar on medium screens -->
+  <div id="navmed" class="w3-bar w3-theme-d2 w3-hide-large w3-hide-small">
+    <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Havainnot</a>
+    <a href="#" onclick="document.getElementById('modal').style.display='block'; setCurrentDate()" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Lisää havainto</a>
+    <a href="#birds" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Linnut</a>
+	<a style="margin-left: 6em;" class="w3-bar-item w3-hide-small w3-display-middle">Hei {{username}}</a>
+    <a href="/logout" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">Kirjaudu ulos</a>
+  </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#static" class="w3-bar-item w3-button">Tilastot</a>
+    <a href="#" class="w3-bar-item w3-button">Havainnot</a>
     <a href="#birds" class="w3-bar-item w3-button">Linnut</a>
-    <a href="#" class="w3-bar-item w3-button">Haku</a>
     <a href="/logout" class="w3-bar-item w3-button">Kirjaudu ulos</a>
   </div>
 </div>
@@ -169,9 +177,9 @@
 	<div class="w3-row"><br>
 		<hr>
 		{% for bird in birds %}
-		<div class="w3-col s2">
-		  <img src="{{bird.image}}" alt="kurppa" style="width:70%; margin-top:30px" class="bird-img w3-circle">
-		  <h3 style="margin-bottom: 0px;margin-top: 7px;">{{bird.name_fi}}</h3>
+		<div class="w3-col l2 m4 s6">
+		  <img class="bird-img w3-circle" src="{{bird.image}}" alt="kurppa" style="width:70%; margin-top:30px">
+		  <h4 class="bird-name">{{bird.name_fi}}</h4>
 		  <p>{{bird.name_lat}}</p>
 		</div>
 		{% endfor %}
