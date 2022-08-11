@@ -1,7 +1,7 @@
 # Kurppa
 Tsoha 2022 - tietojenkäsittelytieteen tietokantasovellusharjoitustyökurssi
 
-Kurppa-sovellus on tarkoitettu lintuhavaintojen merkitsemiseen ja omien tilastoiden katselemiseen.
+Kurppa-sovellus on tarkoitettu Suomessa tehtyjen lintuhavaintojen merkitsemiseen ja omien tilastoiden katselemiseen.
 
 Sovelluksen voi käynnistää osoitteessa: [https://kurppa.herokuapp.com](https://kurppa.herokuapp.com/).
 
