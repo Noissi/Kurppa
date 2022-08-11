@@ -1,5 +1,6 @@
 from app import app
-from flask import redirect, render_template, request, session
+import secrets
+from flask import abort, redirect, render_template, request, session
 from services.user_service import user_service
 from services.sight_service import sight_service
 from services.bird_service import bird_service
@@ -29,7 +30,7 @@ def index():
     orderr_nums = bird_service.get_birdnums_in_orderrs()
     orderr_statics = sight_service.get_orderr_statics(orderrs, user)
 
-    return render_template("index.html", username=username,
+    return render_template("index.html", session=session, username=username,
                             sights10=sights10, unique_sights=unique_sights,
                             score=score, score_year=score_year,
                             score_month=score_month, score_day=score_day,
@@ -68,12 +69,14 @@ def login():
         user.set_score(sight_service.get_score_db(user))
         user_json = user_service.to_json(user)
         session["user"] = user_json
+        session["csrf_token"] = secrets.token_hex(16)
         return redirect("/")
     return render_template("login.html", error=error)
 
 @app.route("/logout")
 def logout():
     del session["user"]
+    del session["csrf_token"]
     return redirect("/")
 
 @app.route("/add-sight", methods=["GET"])
@@ -82,6 +85,9 @@ def sight():
 
 @app.route("/add-sight", methods=["POST"])
 def add():
+    if session["csrf_token"] != request.form["csrf_token"]:
+        abort(403)
+
     birdname = request.form["birdname"]
     date = request.form["date"]
 
