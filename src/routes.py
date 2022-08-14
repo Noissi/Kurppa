@@ -52,6 +52,7 @@ def signup():
         user = UserAccount(username, password)
         user_json = user_service.to_json(user)
         session["user"] = user_json
+        session["csrf_token"] = secrets.token_hex(16)
         return redirect("/")
     return render_template("signup.html", error=error)
 
